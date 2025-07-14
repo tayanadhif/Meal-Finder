@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder - Find Your Perfect Recipe</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">MealFinder</h1>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#favorites" class="nav-link">Favorites</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Find Your Perfect Recipe</h1>
+            <p>Discover thousands of delicious meals from around the world</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for meals...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <section class="search-results" id="searchResults">
+        <div class="container">
+            <h2 id="resultsTitle" style="display: none;">Search Results</h2>
+            <div class="sort-controls" id="sortControls" style="display: none;">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect">
+                    <option value="name">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="category">Category</option>
+                    <option value="area">Area</option>
+                </select>
+            </div>
+            <div id="mealsContainer" class="meals-grid"></div>
+        </div>
+    </section>
+
+    <!-- Meal Detail Modal -->
+    <div id="mealModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="mealDetails"></div>
+        </div>
+    </div>
+
+    <!-- Favorites Section -->
+    <section id="favorites" class="favorites-section">
+        <div class="container">
+            <h2>Your Favorite Meals</h2>
+            <div id="favoritesContainer" class="meals-grid"></div>
+        </div>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
