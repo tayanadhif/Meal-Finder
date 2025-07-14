@@ -516,20 +516,3 @@ body {
         padding: 0 10px;
     }
 }
-    .meal-card img {
-        height: 150px;
-    }
-    
-    .meal-info h3 {
-        font-size: 1.2rem;
-    }
-    
-    .meal-info p {
-        font-size: 0.8rem;
-    }
-    
-    .sort-controls select {
-        width: 100%;
-        margin-top: 1rem;
-    }
-}
